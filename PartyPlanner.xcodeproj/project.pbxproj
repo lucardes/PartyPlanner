@@ -15,6 +15,9 @@
 		49AEA2C026333B570072453E /* PartyPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AEA2BF26333B570072453E /* PartyPlannerUITests.swift */; };
 		49AEA35D26381DF80072453E /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AEA35C26381DF80072453E /* Dog.swift */; };
 		49AEA36226381E1E0072453E /* DogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AEA36126381E1E0072453E /* DogRepository.swift */; };
+		A0AFCED4264043B10043361F /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AFCED3264043B10043361F /* EventListView.swift */; };
+		A0AFCED6264044F60043361F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AFCED5264044F60043361F /* Event.swift */; };
+		A0AFCED8264045F20043361F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AFCED7264045F20043361F /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		49AEA2C126333B570072453E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49AEA35C26381DF80072453E /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		49AEA36126381E1E0072453E /* DogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepository.swift; sourceTree = "<group>"; };
+		A0AFCED3264043B10043361F /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		A0AFCED5264044F60043361F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		A0AFCED7264045F20043361F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +105,16 @@
 		49AEA2A126333B550072453E /* PartyPlanner */ = {
 			isa = PBXGroup;
 			children = (
-				49AEA2A226333B550072453E /* PartyPlanner.swift */,
 				49AEA2A426333B550072453E /* ContentView.swift */,
+				A0AFCED3264043B10043361F /* EventListView.swift */,
+				49AEA2A226333B550072453E /* PartyPlanner.swift */,
 				49AEA2A626333B570072453E /* Assets.xcassets */,
 				49AEA2AB26333B570072453E /* Info.plist */,
 				49AEA2A826333B570072453E /* Preview Content */,
+				A0AFCED5264044F60043361F /* Event.swift */,
 				49AEA35C26381DF80072453E /* Dog.swift */,
 				49AEA36126381E1E0072453E /* DogRepository.swift */,
+				A0AFCED7264045F20043361F /* Item.swift */,
 			);
 			path = PartyPlanner;
 			sourceTree = "<group>";
@@ -268,6 +277,9 @@
 				49AEA36226381E1E0072453E /* DogRepository.swift in Sources */,
 				49AEA2A526333B550072453E /* ContentView.swift in Sources */,
 				49AEA2A326333B550072453E /* PartyPlanner.swift in Sources */,
+				A0AFCED4264043B10043361F /* EventListView.swift in Sources */,
+				A0AFCED8264045F20043361F /* Item.swift in Sources */,
+				A0AFCED6264044F60043361F /* Event.swift in Sources */,
 				49AEA35D26381DF80072453E /* Dog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
