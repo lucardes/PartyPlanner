@@ -11,7 +11,7 @@ import SwiftUI
 struct Event {
     var name: String
     var icon: String
-    var color: SwiftUI.Color
+    var color: String
     var numberOfPeople: Int
     var listOfItems: [Item]
 }

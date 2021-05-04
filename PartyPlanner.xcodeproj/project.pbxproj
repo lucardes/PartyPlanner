@@ -18,6 +18,9 @@
 		A0AFCED4264043B10043361F /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AFCED3264043B10043361F /* EventListView.swift */; };
 		A0AFCED6264044F60043361F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AFCED5264044F60043361F /* Event.swift */; };
 		A0AFCED8264045F20043361F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AFCED7264045F20043361F /* Item.swift */; };
+		FF7F93D1264179D50085719D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7F93D0264179D50085719D /* Style.swift */; };
+		FF7F93D72641907A0085719D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7F93D62641907A0085719D /* SearchBar.swift */; };
+		FF7F93E2264194770085719D /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7F93E1264194770085719D /* EventController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		A0AFCED3264043B10043361F /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		A0AFCED5264044F60043361F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A0AFCED7264045F20043361F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		FF7F93D0264179D50085719D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		FF7F93D62641907A0085719D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		FF7F93E1264194770085719D /* EventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		49AEA2A126333B550072453E /* PartyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				FF7F93D52641905C0085719D /* Components */,
 				49AEA2A426333B550072453E /* ContentView.swift */,
 				A0AFCED3264043B10043361F /* EventListView.swift */,
 				49AEA2A226333B550072453E /* PartyPlanner.swift */,
@@ -115,6 +122,8 @@
 				49AEA35C26381DF80072453E /* Dog.swift */,
 				49AEA36126381E1E0072453E /* DogRepository.swift */,
 				A0AFCED7264045F20043361F /* Item.swift */,
+				FF7F93D0264179D50085719D /* Style.swift */,
+				FF7F93E1264194770085719D /* EventController.swift */,
 			);
 			path = PartyPlanner;
 			sourceTree = "<group>";
@@ -143,6 +152,14 @@
 				49AEA2C126333B570072453E /* Info.plist */,
 			);
 			path = PartyPlannerUITests;
+			sourceTree = "<group>";
+		};
+		FF7F93D52641905C0085719D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FF7F93D62641907A0085719D /* SearchBar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,8 +296,11 @@
 				49AEA2A326333B550072453E /* PartyPlanner.swift in Sources */,
 				A0AFCED4264043B10043361F /* EventListView.swift in Sources */,
 				A0AFCED8264045F20043361F /* Item.swift in Sources */,
+				FF7F93D72641907A0085719D /* SearchBar.swift in Sources */,
 				A0AFCED6264044F60043361F /* Event.swift in Sources */,
 				49AEA35D26381DF80072453E /* Dog.swift in Sources */,
+				FF7F93E2264194770085719D /* EventController.swift in Sources */,
+				FF7F93D1264179D50085719D /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
