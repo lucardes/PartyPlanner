@@ -16,5 +16,5 @@ struct Event {
     var color: Color
     var numberOfPeople: Int = 0
     var listOfItems: [Item] = []
-
+    var date: Date
 }
