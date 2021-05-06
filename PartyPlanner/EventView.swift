@@ -4,7 +4,7 @@ import SwiftUI
 struct EventView: View {
     
     @State var numOfPeople = 0
-    
+    @StateObject var eventController = EventController()
     var body: some View {
         VStack(
             alignment: .leading,
@@ -12,12 +12,11 @@ struct EventView: View {
         ){
             NavigationView {
                 List {
-                    TextField("N Participantes", value: $numOfPeople, formatter: NumberFormatter())
+                    TextField("N de Participantes", value: $numOfPeople, formatter: NumberFormatter())
                         .keyboardType(.numberPad)
                     Section(header: Text("oi")){
-                        ForEach(events, id: \.self){ event in
-                            Text("oi")
-                            
+                        ForEach(eventController.list(), id: \.name){ event in
+                            Text("aaaaa")
                         }
                     }
                 }
@@ -38,7 +37,9 @@ struct EventView: View {
 
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
-        EventView()
-            .previewDevice("iPhone 12")
+        Group {
+            EventView()
+                .previewDevice("iPhone 12")
+        }
     }
 }
