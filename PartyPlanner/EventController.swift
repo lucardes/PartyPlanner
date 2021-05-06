@@ -14,11 +14,12 @@ class EventController: ObservableObject {
     
     static func testRepository() -> EventController {
 
-
         let repository = EventController()
-        repository.eventList = [Event(name: "Aniversário de Mari", icon: "􀑊", color: Color(UIColor.systemPurple), date: Date()),
-                                Event(name: "Casamento de Lucas", icon: "􀊵", color: Color(UIColor.systemPurple), date: Date()),
-                                Event(name: "Churrasco do Zé", icon: "􀆮", color: Color(UIColor.systemPurple), date: Date())
+        repository.eventList = [
+            Event(name: "Aniversário de Mari", icon: "􀑊", color: Color(UIColor.systemPurple), date: Date()),
+            Event(name: "Casamento de Lucas", icon: "􀊵", color: Color(UIColor.systemPurple), date: Date()),
+            Event(name: "Churrasco do Zé", icon: "􀆮", color: Color(UIColor.systemPurple), date: Date())
+
         ]
 
         return repository
