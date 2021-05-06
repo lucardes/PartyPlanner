@@ -2,9 +2,6 @@ import SwiftUI
 
 struct EventList: View {
     
-//    var futureEvents : [TableItem] = testDataTableItem
-//    var pastEvents : [TableItem] = testDataTableItem
-    
     var body: some View {
         
         NavigationView {
@@ -14,10 +11,7 @@ struct EventList: View {
          
         
             List {
-                //ForEach(menu) { section in
                 Section(header: Text("eventos futuros")){
-                //  ForEach(section.items) { item in
-                //      Text(item.name)}}}
                 
                 Text("1")
                 Text("2")
