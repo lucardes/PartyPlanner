@@ -16,7 +16,7 @@ struct Event {
     var color: UIColor
     var numberOfPeople: Int = 0
     var listOfItems: [Item] = []
-    //var date: Date
+    var date: Date
     
 //    var mainImage: String {
 //        name.replacingOccurrences(of: " ", with: "-").lowercased()

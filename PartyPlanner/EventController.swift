@@ -12,15 +12,15 @@ class EventController: ObservableObject {
         eventList
     }
     
-    static func testRepository() -> EventController {
-        
-        let repository = testRepository()
-        repository.eventList = [Event(name: "Aniversário de Mari", icon: "􀑊", color: UIColor.systemPurple),
-                                Event(name: "Casamento de Lucas", icon: "􀊵", color: UIColor.systemPurple),
-                                Event(name: "Churrasco do Zé", icon: "􀆮", color: UIColor.systemPurple)
-        ]
-        
-        return repository
-        
-    }
+//    static func testRepository() -> EventController {
+//
+//        let repository = testRepository()
+//        repository.eventList = [Event(name: "Aniversário de Mari", icon: "􀑊", color: UIColor.systemPurple),
+//                                Event(name: "Casamento de Lucas", icon: "􀊵", color: UIColor.systemPurple),
+//                                Event(name: "Churrasco do Zé", icon: "􀆮", color: UIColor.systemPurple)
+//        ]
+//
+//        return repository
+//
+//    }
 }
