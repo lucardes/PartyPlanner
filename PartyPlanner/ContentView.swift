@@ -1,16 +1,9 @@
-//
-//  ContentView.swift
-//  PartyPlanner
-//
-//  Created by SERGIO J RAFAEL ORDINE on 23/04/21.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var eventController = EventController()
     var body: some View {
-        Text("Hello, danilethmis!")
-            .padding()
+        EventListView()
     }
 }
 

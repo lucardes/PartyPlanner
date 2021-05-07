@@ -1,10 +1,3 @@
-//
-//  Event.swift
-//  PartyPlanner
-//
-//  Created by Lucas de Souza on 03/05/21.
-//
-
 import Foundation
 import SwiftUI
 
