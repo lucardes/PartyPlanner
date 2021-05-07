@@ -15,11 +15,15 @@
 		49AEA2C026333B570072453E /* PartyPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AEA2BF26333B570072453E /* PartyPlannerUITests.swift */; };
 		49AEA35D26381DF80072453E /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AEA35C26381DF80072453E /* Dog.swift */; };
 		49AEA36226381E1E0072453E /* DogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AEA36126381E1E0072453E /* DogRepository.swift */; };
-		A0AFCED4264043B10043361F /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AFCED3264043B10043361F /* EventListView.swift */; };
 		A0AFCED6264044F60043361F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AFCED5264044F60043361F /* Event.swift */; };
 		A0AFCED8264045F20043361F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AFCED7264045F20043361F /* Item.swift */; };
+		FF6311DA264590C7004E2233 /* CreateEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6311D9264590C6004E2233 /* CreateEvent.swift */; };
+		FF6311DF264590E2004E2233 /* EmojiSwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6311DE264590E2004E2233 /* EmojiSwatchView.swift */; };
+		FF6311E4264590ED004E2233 /* ColorSwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6311E3264590ED004E2233 /* ColorSwatchView.swift */; };
+		FF6311E926459184004E2233 /* NumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6311E826459184004E2233 /* NumbersOnly.swift */; };
+		FF6311EE264591BD004E2233 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6311ED264591BD004E2233 /* EventListView.swift */; };
+		FF6311F926459203004E2233 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6311F826459203004E2233 /* SearchBar.swift */; };
 		FF7F93D1264179D50085719D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7F93D0264179D50085719D /* Style.swift */; };
-		FF7F93D72641907A0085719D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7F93D62641907A0085719D /* SearchBar.swift */; };
 		FF7F93E2264194770085719D /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7F93E1264194770085719D /* EventController.swift */; };
 		FF7F93EA2642C0D00085719D /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7F93E92642C0D00085719D /* EventView.swift */; };
 /* End PBXBuildFile section */
@@ -56,11 +60,15 @@
 		49AEA2C126333B570072453E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49AEA35C26381DF80072453E /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		49AEA36126381E1E0072453E /* DogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepository.swift; sourceTree = "<group>"; };
-		A0AFCED3264043B10043361F /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		A0AFCED5264044F60043361F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		A0AFCED7264045F20043361F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		FF6311D9264590C6004E2233 /* CreateEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateEvent.swift; path = "../../PartyPlannerLucas 2/PartyPlanner/CreateEvent.swift"; sourceTree = "<group>"; };
+		FF6311DE264590E2004E2233 /* EmojiSwatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmojiSwatchView.swift; path = "../../../PartyPlannerLucas 2/PartyPlanner/Components/EmojiSwatchView.swift"; sourceTree = "<group>"; };
+		FF6311E3264590ED004E2233 /* ColorSwatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorSwatchView.swift; path = "../../../PartyPlannerLucas 2/PartyPlanner/Components/ColorSwatchView.swift"; sourceTree = "<group>"; };
+		FF6311E826459184004E2233 /* NumbersOnly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumbersOnly.swift; path = "../../PartyPlannerLucas 2/PartyPlanner/NumbersOnly.swift"; sourceTree = "<group>"; };
+		FF6311ED264591BD004E2233 /* EventListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventListView.swift; path = "../../PartyPlanner 3/PartyPlanner/EventListView.swift"; sourceTree = "<group>"; };
+		FF6311F826459203004E2233 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchBar.swift; path = "../../../PartyPlanner 3/PartyPlanner/Components/SearchBar.swift"; sourceTree = "<group>"; };
 		FF7F93D0264179D50085719D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		FF7F93D62641907A0085719D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		FF7F93E1264194770085719D /* EventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
 		FF7F93E92642C0D00085719D /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,15 +123,17 @@
 			children = (
 				FF7F93D52641905C0085719D /* Components */,
 				49AEA2A426333B550072453E /* ContentView.swift */,
-				A0AFCED3264043B10043361F /* EventListView.swift */,
+				FF6311ED264591BD004E2233 /* EventListView.swift */,
 				49AEA2A226333B550072453E /* PartyPlanner.swift */,
 				49AEA2A626333B570072453E /* Assets.xcassets */,
 				49AEA2AB26333B570072453E /* Info.plist */,
 				49AEA2A826333B570072453E /* Preview Content */,
 				A0AFCED5264044F60043361F /* Event.swift */,
+				FF6311D9264590C6004E2233 /* CreateEvent.swift */,
 				49AEA35C26381DF80072453E /* Dog.swift */,
 				49AEA36126381E1E0072453E /* DogRepository.swift */,
 				A0AFCED7264045F20043361F /* Item.swift */,
+				FF6311E826459184004E2233 /* NumbersOnly.swift */,
 				FF7F93D0264179D50085719D /* Style.swift */,
 				FF7F93E1264194770085719D /* EventController.swift */,
 				FF7F93E92642C0D00085719D /* EventView.swift */,
@@ -160,7 +170,9 @@
 		FF7F93D52641905C0085719D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FF7F93D62641907A0085719D /* SearchBar.swift */,
+				FF6311E3264590ED004E2233 /* ColorSwatchView.swift */,
+				FF6311F826459203004E2233 /* SearchBar.swift */,
+				FF6311DE264590E2004E2233 /* EmojiSwatchView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -296,11 +308,15 @@
 			files = (
 				49AEA36226381E1E0072453E /* DogRepository.swift in Sources */,
 				49AEA2A526333B550072453E /* ContentView.swift in Sources */,
+				FF6311F926459203004E2233 /* SearchBar.swift in Sources */,
+				FF6311DA264590C7004E2233 /* CreateEvent.swift in Sources */,
 				FF7F93EA2642C0D00085719D /* EventView.swift in Sources */,
+				FF6311E926459184004E2233 /* NumbersOnly.swift in Sources */,
 				49AEA2A326333B550072453E /* PartyPlanner.swift in Sources */,
-				A0AFCED4264043B10043361F /* EventListView.swift in Sources */,
+				FF6311EE264591BD004E2233 /* EventListView.swift in Sources */,
+				FF6311E4264590ED004E2233 /* ColorSwatchView.swift in Sources */,
 				A0AFCED8264045F20043361F /* Item.swift in Sources */,
-				FF7F93D72641907A0085719D /* SearchBar.swift in Sources */,
+				FF6311DF264590E2004E2233 /* EmojiSwatchView.swift in Sources */,
 				A0AFCED6264044F60043361F /* Event.swift in Sources */,
 				49AEA35D26381DF80072453E /* Dog.swift in Sources */,
 				FF7F93E2264194770085719D /* EventController.swift in Sources */,
