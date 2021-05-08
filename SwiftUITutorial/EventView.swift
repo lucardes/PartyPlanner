@@ -5,33 +5,68 @@ struct EventView: View {
     
     @State var numOfPeople = 0
     @StateObject var eventController = EventController()
+    @State var emptyItem: Item = Item(id: "", name: "", unity: .unidade, category: .bebidas, quantityPerPerson: 0, pricePerPerson: 0, quantityToBuy: 0, quantityBought: 0)
+    @State var itens: [Item] = testDataItensBebidas
+    @State var itens2: [Item] = testDataItensComidas
+    @State private var showModal: Bool = false
+    
     var body: some View {
-        VStack(
-            alignment: .leading,
-            spacing: 24
-        ){
-            NavigationView {
-                List {
-                    TextField("N de Participantes", value: $numOfPeople, formatter: NumberFormatter())
-                        .keyboardType(.numberPad)
-                    Section(header: Text("oi")){
-                        ForEach(eventController.list(), id: \.name){ event in
-                            Text("aaaaa")
-                        }
+        
+        VStack(alignment: .leading){
+            List {
+                
+                TextField("N de Participantes", value: $numOfPeople, formatter: NumberFormatter())
+                                        .keyboardType(.numberPad)
+                
+                Section(header: Text("Bebidas")){
+                    ForEach (itens.indices) { idx in
+                        ItemCellTotal(item: self.$itens[idx])
                     }
                 }
-                .navigationTitle("Aniversário de Mari")
-                .listStyle(GroupedListStyle())
+                
+                Section(header: Text("Comidas")){
+                    ForEach (itens2.indices) { idx in
+                        ItemCellTotal(item: self.$itens2[idx])
+                    }
+                }
+            }
+            .listStyle(GroupedListStyle())
+            
+            Button(action: {
+                self.showModal = true
+            }) {
+              HStack {
+                Image(systemName: "plus.circle.fill")
+                  .resizable()
+                  .frame(width: 20, height: 20)
+                Text("Incluir item")
+              }
+            }
+            .padding()
+            .accentColor(Color(UIColor.systemRed))
+            .sheet(isPresented: self.$showModal) {
+                CreateItem(item: $emptyItem)
             }
         }
-        .frame(
-            minWidth: 0,
-            maxWidth: .infinity,
-            minHeight: 0,
-            maxHeight: .infinity,
-            alignment: .topLeading
-        )
-        .background(Color("Background").ignoresSafeArea())
+        .navigationTitle("Lista de compras")
+    }
+}
+
+struct ItemCellTotal: View {
+    
+    @Binding var item: Item
+    @State private var showModal: Bool = false //aaaaaaaaa
+    
+    var body: some View {
+        NavigationLink(destination: ItemDetails(item: $item)) {
+            HStack {
+
+                Text(item.name)
+                Spacer()
+                Text(String(item.quantityToBuy))
+                    .foregroundColor(Color(.systemGray))
+            }
+        }
     }
 }
 
