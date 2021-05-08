@@ -3,9 +3,10 @@ import SwiftUI
 
 struct EventView: View {
     
+    @State var eventColor = Color(.systemRed)
     @State var numOfPeople = 0
     @StateObject var eventController = EventController()
-    @State var emptyItem: Item = Item(id: "", name: "", unity: .unidade, category: .bebidas, quantityPerPerson: 0, pricePerPerson: 0, quantityToBuy: 0, quantityBought: 0)
+    @State var emptyItem: Item = Item()
     @State var itens: [Item] = testDataItensBebidas
     @State var itens2: [Item] = testDataItensComidas
     @State private var showModal: Bool = false
@@ -45,7 +46,7 @@ struct EventView: View {
             .padding()
             .accentColor(Color(UIColor.systemRed))
             .sheet(isPresented: self.$showModal) {
-                CreateItem(item: $emptyItem)
+                CreateItemView(color: $eventColor)
             }
         }
         .navigationTitle("Lista de compras")

@@ -28,6 +28,11 @@
 		EF9938E12645A3C2000E7564 /* NumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9938E02645A3C2000E7564 /* NumbersOnly.swift */; };
 		EF9938E92645A63A000E7564 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9938E82645A63A000E7564 /* ShoppingListView.swift */; };
 		EF9938F126464309000E7564 /* EventItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9938F026464309000E7564 /* EventItemView.swift */; };
+		FFE239C22646DB740047A6B2 /* CreateItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE239C12646DB740047A6B2 /* CreateItemView.swift */; };
+		FFE239D52646DF7D0047A6B2 /* UpdateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE239D42646DF7D0047A6B2 /* UpdateListView.swift */; };
+		FFE239DA2646E2900047A6B2 /* CategorySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE239D92646E2900047A6B2 /* CategorySelection.swift */; };
+		FFE239DF2646FAED0047A6B2 /* UnitySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE239DE2646FAED0047A6B2 /* UnitySelectionView.swift */; };
+		FFE239E42646FB3A0047A6B2 /* UnitySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE239E32646FB3A0047A6B2 /* UnitySelection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,11 @@
 		EF9938E02645A3C2000E7564 /* NumbersOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersOnly.swift; sourceTree = "<group>"; };
 		EF9938E82645A63A000E7564 /* ShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListView.swift; sourceTree = "<group>"; };
 		EF9938F026464309000E7564 /* EventItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItemView.swift; sourceTree = "<group>"; };
+		FFE239C12646DB740047A6B2 /* CreateItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemView.swift; sourceTree = "<group>"; };
+		FFE239D42646DF7D0047A6B2 /* UpdateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateListView.swift; sourceTree = "<group>"; };
+		FFE239D92646E2900047A6B2 /* CategorySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelection.swift; sourceTree = "<group>"; };
+		FFE239DE2646FAED0047A6B2 /* UnitySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitySelectionView.swift; sourceTree = "<group>"; };
+		FFE239E32646FB3A0047A6B2 /* UnitySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitySelection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +153,9 @@
 				EF9938E02645A3C2000E7564 /* NumbersOnly.swift */,
 				EF9938E82645A63A000E7564 /* ShoppingListView.swift */,
 				EF9938F026464309000E7564 /* EventItemView.swift */,
+				FFE239C12646DB740047A6B2 /* CreateItemView.swift */,
+				FFE239D42646DF7D0047A6B2 /* UpdateListView.swift */,
+				FFE239DE2646FAED0047A6B2 /* UnitySelectionView.swift */,
 			);
 			path = SwiftUITutorial;
 			sourceTree = "<group>";
@@ -179,6 +192,8 @@
 				EF9938CB2645A26A000E7564 /* SearchBar.swift */,
 				EF9938D32645A2A2000E7564 /* ColorSwatchView.swift */,
 				EF9938D82645A2BD000E7564 /* EmojiSwatchView.swift */,
+				FFE239D92646E2900047A6B2 /* CategorySelection.swift */,
+				FFE239E32646FB3A0047A6B2 /* UnitySelection.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -314,12 +329,17 @@
 			files = (
 				EF9938E92645A63A000E7564 /* ShoppingListView.swift in Sources */,
 				EF9938C62645A14D000E7564 /* EventListView.swift in Sources */,
+				FFE239C22646DB740047A6B2 /* CreateItemView.swift in Sources */,
 				49AEA36226381E1E0072453E /* DogRepository.swift in Sources */,
 				49AEA2A526333B550072453E /* ContentView.swift in Sources */,
 				EF9938D92645A2BD000E7564 /* EmojiSwatchView.swift in Sources */,
 				EF9938E12645A3C2000E7564 /* NumbersOnly.swift in Sources */,
 				EF9938C12645A11D000E7564 /* CreateEvent.swift in Sources */,
+				FFE239E42646FB3A0047A6B2 /* UnitySelection.swift in Sources */,
 				49AEA2A326333B550072453E /* SwiftUITutorialApp.swift in Sources */,
+				FFE239DF2646FAED0047A6B2 /* UnitySelectionView.swift in Sources */,
+				FFE239D52646DF7D0047A6B2 /* UpdateListView.swift in Sources */,
+				FFE239DA2646E2900047A6B2 /* CategorySelection.swift in Sources */,
 				EF9938CC2645A26A000E7564 /* SearchBar.swift in Sources */,
 				EF9938B92645A04E000E7564 /* EventView.swift in Sources */,
 				EF9938D42645A2A2000E7564 /* ColorSwatchView.swift in Sources */,
