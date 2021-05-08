@@ -17,13 +17,13 @@ let arrayVazio: [Item] = []
 
 struct ShoppingList: View {
     
-    @State var emptyItem: Item = Item(id: "", name: "", unity: .unidade, category: .bebidas, quantityPerPerson: 0, pricePerPerson: 0, quantityToBuy: 0, quantityBought: 0)
+    @State var emptyItem: Item = Item(name: "", unity: .unidade, category: .bebidas, quantityPerPerson: 0, pricePerPerson: 0, quantityToBuy: 0, quantityBought: 0)
     @State var itens: [Item] = testDataItensBebidas
     @State var itens2: [Item] = testDataItensComidas
     @State private var showModal: Bool = false
     
     var body: some View {
-        VStack(alignment: .leading){
+        VStack(alignment: .leading, content: {
             List {
                 Section(header: Text("Bebidas")){
                     ForEach (itens.indices) { idx in
@@ -36,7 +36,7 @@ struct ShoppingList: View {
                         ItemCell(item: self.$itens2[idx])
                     }
                 }
-            }
+            }.navigationTitle("Lista de compras")
             .listStyle(GroupedListStyle())
             
             Button(action: {
@@ -54,8 +54,9 @@ struct ShoppingList: View {
             .sheet(isPresented: self.$showModal) {
                 CreateItem(item: $emptyItem)
             }
-        }
-        .navigationTitle("Lista de compras")
+        })
+        
+        
     }
 }
 

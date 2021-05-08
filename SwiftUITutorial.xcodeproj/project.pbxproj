@@ -27,6 +27,7 @@
 		EF9938D92645A2BD000E7564 /* EmojiSwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9938D82645A2BD000E7564 /* EmojiSwatchView.swift */; };
 		EF9938E12645A3C2000E7564 /* NumbersOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9938E02645A3C2000E7564 /* NumbersOnly.swift */; };
 		EF9938E92645A63A000E7564 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9938E82645A63A000E7564 /* ShoppingListView.swift */; };
+		EF9938F126464309000E7564 /* EventItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9938F026464309000E7564 /* EventItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		EF9938D82645A2BD000E7564 /* EmojiSwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiSwatchView.swift; sourceTree = "<group>"; };
 		EF9938E02645A3C2000E7564 /* NumbersOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersOnly.swift; sourceTree = "<group>"; };
 		EF9938E82645A63A000E7564 /* ShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListView.swift; sourceTree = "<group>"; };
+		EF9938F026464309000E7564 /* EventItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				EF9938C52645A14D000E7564 /* EventListView.swift */,
 				EF9938E02645A3C2000E7564 /* NumbersOnly.swift */,
 				EF9938E82645A63A000E7564 /* ShoppingListView.swift */,
+				EF9938F026464309000E7564 /* EventItemView.swift */,
 			);
 			path = SwiftUITutorial;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				49AEA35D26381DF80072453E /* Dog.swift in Sources */,
 				EF9938AA26459FBB000E7564 /* Item.swift in Sources */,
 				EF9938AF26459FF4000E7564 /* Style.swift in Sources */,
+				EF9938F126464309000E7564 /* EventItemView.swift in Sources */,
 				EF9938B42645A031000E7564 /* EventController.swift in Sources */,
 				EF9938A526459F75000E7564 /* Event.swift in Sources */,
 			);

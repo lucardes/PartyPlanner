@@ -15,7 +15,7 @@ enum itemCategory {
 }
 
 public struct Item {
-    var id: String = UUID().uuidString
+    var id = UUID()
     var name: String
     var unity: itemUnity
     var category: itemCategory
