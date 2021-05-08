@@ -17,48 +17,45 @@ let arrayVazio: [Item] = []
 
 struct ShoppingList: View {
     
-    @State var emptyItem: Item = Item(id: "", name: "", unity: .unidade, category: .bebidas, quantityPerPerson: 0, pricePerPerson: 0, quantityToBuy: 0, quantityBought: 0)
+    @State var emptyItem: Item = Item(name: "", unity: .unidade, category: .bebidas, quantityPerPerson: 0, pricePerPerson: 0, quantityToBuy: 0, quantityBought: 0)
     @State var itens: [Item] = testDataItensBebidas
     @State var itens2: [Item] = testDataItensComidas
     @State private var showModal: Bool = false
     
     var body: some View {
-        NavigationView {
-            
-            VStack(alignment: .leading, content: {
-                List {
-                    Section(header: Text("Bebidas")){
-                        ForEach (itens.indices) { idx in
-                            ItemCell(item: self.$itens[idx])
-                        }
-                    }
-                    
-                    Section(header: Text("Comidas")){
-                        ForEach (itens2.indices) { idx in
-                            ItemCell(item: self.$itens2[idx])
-                        }
+        VStack(alignment: .leading, content: {
+            List {
+                Section(header: Text("Bebidas")){
+                    ForEach (itens.indices) { idx in
+                        ItemCell(item: self.$itens[idx])
                     }
                 }
-                .navigationTitle("Lista de compras")
-                .listStyle(GroupedListStyle())
                 
-                Button(action: {
-                    self.showModal = true
-                }) {
-                  HStack {
-                    Image(systemName: "plus.circle.fill")
-                      .resizable()
-                      .frame(width: 20, height: 20)
-                    Text("Incluir item")
-                  }
+                Section(header: Text("Comidas")){
+                    ForEach (itens2.indices) { idx in
+                        ItemCell(item: self.$itens2[idx])
+                    }
                 }
-                .padding()
-                .accentColor(Color(UIColor.systemRed))
-                .sheet(isPresented: self.$showModal) {
-                    CreateItem(item: $emptyItem)
-                }
-            })
-        }
+            }.navigationTitle("Lista de compras")
+            .listStyle(GroupedListStyle())
+            
+            Button(action: {
+                self.showModal = true
+            }) {
+              HStack {
+                Image(systemName: "plus.circle.fill")
+                  .resizable()
+                  .frame(width: 20, height: 20)
+                Text("Incluir item")
+              }
+            }
+            .padding()
+            .accentColor(Color(UIColor.systemRed))
+            .sheet(isPresented: self.$showModal) {
+                CreateItem(item: $emptyItem)
+            }
+        })
+        
         
     }
 }

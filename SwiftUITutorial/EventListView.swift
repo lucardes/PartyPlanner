@@ -37,7 +37,7 @@ struct EventListView: View {
                     Section(header: Text("eventos futuros")){ //section eventos futuros
                         ForEach(repository){ event in
                             NavigationLink(destination: Text ("Item 1 Destination")) { //event view
-                                EventCellView(event: event)
+                                EventItemView(event: event)
                              }
                         }
                     }

@@ -18,7 +18,7 @@ struct EventItem: Codable, Equatable, Identifiable {
     
 }
 
-struct EventCellView: View {
+struct EventItemView: View {
     var event: Event
     
     var body: some View {
@@ -42,7 +42,7 @@ struct EventCellView: View {
 
 struct EventItemView_Previews: PreviewProvider {
     static var previews: some View {
-        EventCellView(event: Event(name: "Churrasco do Zé", icon: "􀆮", color: Color(UIColor.systemPurple), date: Date()))
+        EventItemView(event: Event(name: "Churrasco do Zé", icon: "􀆮", color: Color(UIColor.systemPurple), date: Date()))
             .previewLayout(.sizeThatFits)
     }
 }
