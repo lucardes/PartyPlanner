@@ -2,28 +2,13 @@ import SwiftUI
 
 struct EventListView: View {
     
+    @ObservedObject var observedObject: EventController
     @State private var showModal: Bool = false
     
     let repository: [Event] = [
-        Event(name: "Aniversário de Mari", icon: "gift.fill", color: Color(UIColor.systemRed), date: Date()),
-        Event(name: "Casamento de Lucas", icon: "heart.fill", color: Color(UIColor.systemYellow), date: Date()),
-//        Event(name: "Aniversário de Mari", icon: "gift.fill", color: Color(UIColor.systemRed), date: Date()),
-//        Event(name: "Casamento de Lucas", icon: "heart.fill", color: Color(UIColor.systemYellow), date: Date()),
-//        Event(name: "Aniversário de Mari", icon: "gift.fill", color: Color(UIColor.systemRed), date: Date()),
-//        Event(name: "Casamento de Lucas", icon: "heart.fill", color: Color(UIColor.systemYellow), date: Date()),
-//        Event(name: "Aniversário de Mari", icon: "gift.fill", color: Color(UIColor.systemRed), date: Date()),
-//        Event(name: "Casamento de Lucas", icon: "heart.fill", color: Color(UIColor.systemYellow), date: Date()),
-//        Event(name: "Aniversário de Mari", icon: "gift.fill", color: Color(UIColor.systemRed), date: Date()),
-//        Event(name: "Casamento de Lucas", icon: "heart.fill", color: Color(UIColor.systemYellow), date: Date()),
-//        Event(name: "Aniversário de Mari", icon: "gift.fill", color: Color(UIColor.systemRed), date: Date()),
-//        Event(name: "Casamento de Lucas", icon: "heart.fill", color: Color(UIColor.systemYellow), date: Date()),
-//        Event(name: "Aniversário de Mari", icon: "gift.fill", color: Color(UIColor.systemRed), date: Date()),
-//        Event(name: "Casamento de Lucas", icon: "heart.fill", color: Color(UIColor.systemYellow), date: Date()),
-//        Event(name: "Aniversário de Mari", icon: "gift.fill", color: Color(UIColor.systemRed), date: Date()),
-//        Event(name: "Casamento de Lucas", icon: "heart.fill", color: Color(UIColor.systemYellow), date: Date()),
-//        Event(name: "Aniversário de Mari", icon: "gift.fill", color: Color(UIColor.systemRed), date: Date()),
-//        Event(name: "Casamento de Lucas", icon: "heart.fill", color: Color(UIColor.systemYellow), date: Date()),
-        Event(name: "Churrasco do Zé", icon: "sun.max.fill", color: Color(UIColor.systemPurple), date: Date())
+        Event(name: "Aniversário de Mari", icon: "gift.fill", color: Color(UIColor.systemRed), numberOfPeople: 3, startDate: Date(), endDate: Date()),
+        Event(name: "Casamento de Lucas", icon: "heart.fill", color: Color(UIColor.systemYellow), numberOfPeople: 4, startDate: Date(), endDate: Date()),
+        Event(name: "Churrasco do Zé", icon: "sun.max.fill", color: Color(UIColor.systemPurple), numberOfPeople: 5, startDate: Date(), endDate: Date())
     ]
     
     var body: some View {
@@ -35,10 +20,10 @@ struct EventListView: View {
          
                 List {
                     Section(header: Text("eventos futuros")){ //section eventos futuros
-                        ForEach(repository){ event in
-                            NavigationLink(destination: Text ("Item 1 Destination")) { //event view
-                                EventItemView(event: event)
-                             }
+                        ForEach(observedObject.list()){ event in
+//                            NavigationLink(destination: EventView(eventId: event.id, observedObject: observedObject)) { //event view
+//                                EventItemView(event: event)
+//                             }
                         }
                     }
     //                Section(header: Text("eventos passados")){
@@ -59,7 +44,7 @@ struct EventListView: View {
                         .fontWeight(.semibold)
                         .font(.system(size: 17))
                   }.sheet(isPresented: self.$showModal) {
-                    CreateEvent()
+                    CreateEvent(observedObject: observedObject)
                   }
 
                 }
@@ -73,12 +58,12 @@ struct EventListView: View {
     }
 }
 
-struct EventList_Previews: PreviewProvider {
-    
-    var repository = EventController.testRepository()
-    
-    static var previews: some View {
-        EventListView()
-            .previewDevice("iPhone 12")
-    }
-}
+//struct EventList_Previews: PreviewProvider {
+//    
+//    var repository = EventController.testRepository()
+//    
+//    static var previews: some View {
+//        EventListView(observedObject: observedObject)
+//            .previewDevice("iPhone 12")
+//    }
+//}

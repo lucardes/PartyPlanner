@@ -8,7 +8,18 @@
 import Foundation
 import SwiftUI
 
-struct Event: Identifiable  {
+class Event: Identifiable  {
+    
+    init(name:String, icon:String, color: Color, numberOfPeople: Int, startDate:Date, endDate:Date) {
+        self.id = UUID()
+        self.name = name
+        self.icon = icon
+        self.color = color
+        self.numberOfPeople = numberOfPeople
+        self.listOfItems = []
+        self.startDate = startDate
+        self.endDate = endDate
+    }
     
     var id = UUID()
     var name: String
@@ -16,5 +27,10 @@ struct Event: Identifiable  {
     var color: Color
     var numberOfPeople: Int = 0
     var listOfItems: [Item] = []
-    var date: Date
+    var startDate: Date
+    var endDate: Date
+    
+    func addItem(newItem: Item){
+        self.listOfItems.append(newItem)
+    }
 }

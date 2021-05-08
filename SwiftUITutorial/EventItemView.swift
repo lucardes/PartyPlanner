@@ -24,7 +24,7 @@ struct EventItemView: View {
     var body: some View {
         
         HStack{
-            Image(systemName: event.icon) //event.icon não tá pegando mais :((((
+            Image(systemName: event.icon)
                 .colorInvert()
                 .background(Circle()
                                 .fill(event.color) //event.color
@@ -34,7 +34,7 @@ struct EventItemView: View {
                 .frame(width: 200, height: 20, alignment: .leading)
                 .font(.system(size: 17))
             Spacer()
-            Text(event.date, style: .date) // event.date
+            Text(event.startDate, style: .date) // event.date
                     .foregroundColor(Color(.systemGray))
         }
     }
@@ -42,7 +42,15 @@ struct EventItemView: View {
 
 struct EventItemView_Previews: PreviewProvider {
     static var previews: some View {
-        EventItemView(event: Event(name: "Churrasco do Zé", icon: "􀆮", color: Color(UIColor.systemPurple), date: Date()))
+        EventItemView(event: Event(
+            name: "Churrasco do Zé",
+            icon: "sun.max.fill",
+            color: Color(UIColor.systemPurple),
+            numberOfPeople: 5,
+            startDate:Date(),
+            endDate:Date()
+            )
+        )
             .previewLayout(.sizeThatFits)
     }
 }
