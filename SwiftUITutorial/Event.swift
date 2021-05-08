@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-struct Event {
+struct Event: Identifiable  {
     
-    var id: String = UUID().uuidString
+    var id = UUID()
     var name: String
     var icon: String
     var color: Color
@@ -18,6 +18,3 @@ struct Event {
     var listOfItems: [Item] = []
     var date: Date
 }
-
-
-// adicionar mais coisa de camis

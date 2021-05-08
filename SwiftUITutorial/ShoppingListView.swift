@@ -23,39 +23,43 @@ struct ShoppingList: View {
     @State private var showModal: Bool = false
     
     var body: some View {
-        VStack(alignment: .leading){
-            List {
-                Section(header: Text("Bebidas")){
-                    ForEach (itens.indices) { idx in
-                        ItemCell(item: self.$itens[idx])
-                    }
-                }
-                
-                Section(header: Text("Comidas")){
-                    ForEach (itens2.indices) { idx in
-                        ItemCell(item: self.$itens2[idx])
-                    }
-                }
-            }
-            .listStyle(GroupedListStyle())
+        NavigationView {
             
-            Button(action: {
-                self.showModal = true
-            }) {
-              HStack {
-                Image(systemName: "plus.circle.fill")
-                  .resizable()
-                  .frame(width: 20, height: 20)
-                Text("Incluir item")
-              }
-            }
-            .padding()
-            .accentColor(Color(UIColor.systemRed))
-            .sheet(isPresented: self.$showModal) {
-                CreateItem(item: $emptyItem)
-            }
+            VStack(alignment: .leading, content: {
+                List {
+                    Section(header: Text("Bebidas")){
+                        ForEach (itens.indices) { idx in
+                            ItemCell(item: self.$itens[idx])
+                        }
+                    }
+                    
+                    Section(header: Text("Comidas")){
+                        ForEach (itens2.indices) { idx in
+                            ItemCell(item: self.$itens2[idx])
+                        }
+                    }
+                }
+                .navigationTitle("Lista de compras")
+                .listStyle(GroupedListStyle())
+                
+                Button(action: {
+                    self.showModal = true
+                }) {
+                  HStack {
+                    Image(systemName: "plus.circle.fill")
+                      .resizable()
+                      .frame(width: 20, height: 20)
+                    Text("Incluir item")
+                  }
+                }
+                .padding()
+                .accentColor(Color(UIColor.systemRed))
+                .sheet(isPresented: self.$showModal) {
+                    CreateItem(item: $emptyItem)
+                }
+            })
         }
-        .navigationTitle("Lista de compras")
+        
     }
 }
 

@@ -30,6 +30,5 @@ class EventController: ObservableObject {
         ]
 
         return repository
-
     }
 }

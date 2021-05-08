@@ -14,8 +14,8 @@ enum itemCategory {
     case outros
 }
 
-public struct Item {
-    var id: String = UUID().uuidString
+public struct Item: Identifiable  {
+    var id = UUID()
     var name: String
     var unity: itemUnity
     var category: itemCategory
