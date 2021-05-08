@@ -43,7 +43,7 @@ struct CreateItemView: View {
                     
                     Section(header: Text("Categoria")){
                         ForEach( itemCategory.allCases, id: \.self ){ itemcategory in
-                            CategorySelection(category: itemcategory, selectedCategory: $selectedCategory, color: $color)
+                            CategorySelection(category: itemcategory, selectedCategory: $selectedCategory, color: color)
                         }
                     }
                 }

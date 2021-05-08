@@ -13,7 +13,7 @@ struct CategorySelection: View {
     
     var category:itemCategory
     @Binding var selectedCategory:itemCategory
-    @Binding var color: Color
+    var color: Color
     
     var body: some View {
         HStack {

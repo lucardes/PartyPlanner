@@ -1,12 +1,14 @@
 import SwiftUI
 
 struct CreateEvent: View {
+    
+    @ObservedObject var observedObject: EventController
     @Environment(\.presentationMode) var presentationMode
     @State var name: String = ""
     @ObservedObject var numberOfPeople = NumbersOnly()
     
-    @State private var startDate = Date()
-    @State private var endDate = Date() + 1
+    @State private var startDate:Date = Date()
+    @State private var endDate:Date = Date() + 1
     
     @State var selection: String = "Red"
     @State var selectionemoji: String = "heart.fill"
@@ -79,7 +81,16 @@ struct CreateEvent: View {
                 .navigationBarItems(leading: Button("Cancelar") {
                     presentationMode.wrappedValue.dismiss()
                 }.foregroundColor(.purple), trailing: Button("OK") {
-                    //add event to list here
+                    let number = (numberOfPeople.value as NSString).integerValue
+                    let newEvent = Event(
+                        name: name,
+                        icon: selectionemoji,
+                        color: Color(selection),
+                        numberOfPeople: number,
+                        startDate: startDate,
+                        endDate: endDate
+                    )
+                    observedObject.add(newEvent)
                     presentationMode.wrappedValue.dismiss()
                 }.disabled(name.isEmpty || numberOfPeople.value == "").accentColor(.purple))
                 .background(Color("Background")).ignoresSafeArea()
@@ -91,9 +102,9 @@ struct CreateEvent: View {
 }
 
 
-struct CreateEvent_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateEvent()
-            .previewDevice("iPhone 12")
-    }
-}
+//struct CreateEvent_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CreateEvent()
+//            .previewDevice("iPhone 12")
+//    }
+//}

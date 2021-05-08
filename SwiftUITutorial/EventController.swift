@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class EventController: ObservableObject {
-    private var eventList:[Event] = []
+    @Published var eventList:[Event] = []
     
     func add(_ event: Event) {
         eventList.append(event)
@@ -19,13 +19,39 @@ class EventController: ObservableObject {
         eventList
     }
     
+    func find(_ id:UUID) -> Event? {
+        let idx = eventList.firstIndex(where:{$0.id == id})
+        return idx != nil ? eventList[idx!] : nil
+    }
+    
     static func testRepository() -> EventController {
 
         let repository = EventController()
         repository.eventList = [
-            Event(name: "Aniversário de Mari", icon: "􀑊", color: Color(UIColor.systemPurple), date: Date()),
-            Event(name: "Casamento de Lucas", icon: "􀊵", color: Color(UIColor.systemPurple), date: Date()),
-            Event(name: "Churrasco do Zé", icon: "􀆮", color: Color(UIColor.systemPurple), date: Date())
+            Event(
+                name: "Aniversário de Mari",
+                icon: "gift.fill",
+                color: Color(UIColor.systemPurple),
+                numberOfPeople: 3,
+                startDate: Date(),
+                endDate: Date()
+            ),
+            Event(
+                name: "Casamento de Lucas",
+                icon: "heart.fill",
+                color: Color(UIColor.systemPurple),
+                numberOfPeople: 4,
+                startDate: Date(),
+                endDate: Date()
+            ),
+            Event(
+                name: "Churrasco do Zé",
+                icon: "sun.max.fill",
+                color: Color(UIColor.systemPurple),
+                numberOfPeople: 5,
+                startDate: Date(),
+                endDate: Date()
+            )
 
         ]
 

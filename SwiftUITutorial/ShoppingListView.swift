@@ -86,11 +86,17 @@ struct ItemDetails: View {
     
     @Binding var item: Item
     
+    @State var itemname: String = ""
+    @State var quantityToBuy: Int = 0
+    @State var quantityBought: Int = 0
+    @State var observation: String = ""
+    
+    
     var body: some View {
         VStack (alignment: .leading) {
             List {
                 Section {
-                    TextField("Item", text: $item.name, onEditingChanged: {
+                    TextField("Item", text: $itemname, onEditingChanged: {
                         (changed) in
                     })
                 }
@@ -131,19 +137,19 @@ struct ItemDetails: View {
                 }
                 
                 Section(header: Text("Quantidade total a comprar")) {
-                    TextField("0", value: $item.quantityToBuy, formatter: NumberFormatter(), onEditingChanged: {
+                    TextField("0", value: $quantityToBuy, formatter: NumberFormatter(), onEditingChanged: {
                         (changed) in
                     })
                 }
                     
                 Section(header: Text("Quantidade já comprada")) {
-                    TextField("0", value: $item.quantityBought, formatter: NumberFormatter(), onEditingChanged: {
+                    TextField("0", value: $quantityBought, formatter: NumberFormatter(), onEditingChanged: {
                         (changed) in
                     })
                 }
                     
                 Section {
-                    TextField("Observações", text: $item.observation, onEditingChanged: {
+                    TextField("Observações", text: $observation, onEditingChanged: {
                         (changed) in
                     })
                 }
