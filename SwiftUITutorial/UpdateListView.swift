@@ -25,6 +25,7 @@ struct UpdateListView: View {
                         TextField("Item", text: $name, onEditingChanged: {
                             (changed) in
                         })
+                        .foregroundColor(.black)
                     }
                     
                     Section(header: Text("Quantidade total a comprar")) {
@@ -32,18 +33,21 @@ struct UpdateListView: View {
                             (changed) in
                             
                         })
+                        .foregroundColor(.black)
                     }
                         
                     Section(header: Text("Quantidade já comprada")) {
                         TextField("0", value: $quantityBought, formatter: NumberFormatter(), onEditingChanged: {
                             (changed) in
                         })
+                        .foregroundColor(.black)
                     }
                         
                     Section {
                         TextField("Observações", text: $observation, onEditingChanged: {
                             (changed) in
                         })
+                        .foregroundColor(.black)
                     }
                 }
                 .listStyle(GroupedListStyle())

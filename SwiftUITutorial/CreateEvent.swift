@@ -24,6 +24,7 @@ struct CreateEvent: View {
                             
                             TextField("Nome do Evento", text: $name, onEditingChanged: { (changed) in
                             })
+                            .foregroundColor(.black)
                             .padding(.vertical, 11)
                             .padding(.horizontal, 16)
                             .background(Color.white)
@@ -31,13 +32,13 @@ struct CreateEvent: View {
                             Divider()
                             
                             TextField("Número de pessoas esperado", text: $numberOfPeople.value, onEditingChanged: { (changed) in
-                            })
-                            .padding(.vertical, 11)
-                            .padding(.horizontal, 16)
-                            .background(Color.white)
-                            .keyboardType(.decimalPad)
-                            
-                            Divider()
+                                })
+                                .padding(.vertical, 11)
+                                .padding(.horizontal, 16)
+                                .background(Color.white)
+                                .keyboardType(.decimalPad)
+                                
+                                Divider()
                         }
                         
                         Section(header: Text("")){

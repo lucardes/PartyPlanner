@@ -23,6 +23,7 @@ struct EmojiSwatchView: View {
             ForEach(swatches, id: \.self){ swatch in
                 ZStack {
                     Image(systemName: swatch)
+                        .foregroundColor(.black)
                         .frame(width: 45, height: 45)
                         .onTapGesture(perform: {
                             selectionemoji = swatch

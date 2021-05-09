@@ -17,9 +17,13 @@ struct CreateItemView: View {
                         TextField("Item", text: $itemName, onEditingChanged: {
                             (changed) in
                         })
+                        .foregroundColor(.black)
+                        
                         TextField("Quantidade por pessoa", value: $quantityByPerson, formatter: NumberFormatter(), onEditingChanged: {
                             (changed) in
                         })
+                        .foregroundColor(.black)
+                        
                         NavigationLink(
                             //TODO: unity selection view
                             destination: UnitySelectionView(selectedUnity: $unity, color: $color),

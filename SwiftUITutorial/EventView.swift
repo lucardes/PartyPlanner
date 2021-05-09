@@ -4,7 +4,7 @@ import SwiftUI
 struct EventView: View {
     
     @State var eventColor = Color(.systemRed)
-    @State var numOfPeople = ""
+    @State var numberOfPeople = ""
     @StateObject var eventController = EventController()
     @State var emptyItem: Item = Item()
     @State var beverages: [Item] = testDataItensBebidas
@@ -16,8 +16,9 @@ struct EventView: View {
         NavigationView {
             VStack(alignment: .leading){
                 List {
-                    TextField("Nº de Convidados", value: $numOfPeople, formatter: NumberFormatter(), onEditingChanged: { (changed) in
+                    TextField("Número de pessoas esperado", value: $numberOfPeople, formatter: NumberFormatter(), onEditingChanged: { (changed) in
                     })
+                    .foregroundColor(.black)
                     .keyboardType(.numberPad)
                     
                     Section(header: Text("Bebidas")){
