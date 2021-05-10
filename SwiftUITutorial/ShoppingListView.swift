@@ -19,8 +19,8 @@ let arrayVazio: [Item] = []
 struct ShoppingList: View {
     
     @State var emptyItem: Item = Item()
-    @State var itens: [Item] = testDataItensBebidas
-    @State var itens2: [Item] = testDataItensComidas
+    var itens: [Item] = testDataItensBebidas
+    var itens2: [Item] = testDataItensComidas
     @State private var showModal: Bool = false
     
     var body: some View {
@@ -28,13 +28,13 @@ struct ShoppingList: View {
             List {
                 Section(header: Text("Bebidas")){
                     ForEach (itens.indices) { idx in
-                        ItemCell(item: self.$itens[idx])
+                        ItemCell(item: self.itens[idx])
                     }
                 }
                 
                 Section(header: Text("Comidas")){
                     ForEach (itens2.indices) { idx in
-                        ItemCell(item: self.$itens2[idx])
+                        ItemCell(item: self.itens2[idx])
                     }
                 }
             }.navigationTitle("Lista de compras")
@@ -63,11 +63,11 @@ struct ShoppingList: View {
 
 struct ItemCell: View {
     
-    @Binding var item: Item
+    var item: Item
     @State private var showModal: Bool = false //aaaaaaaaa
     
     var body: some View {
-        NavigationLink(destination: ItemDetails(item: $item)) {
+        NavigationLink(destination: ItemDetails(item: item)) {
             HStack {
                 Image(systemName: item.quantityBought == item.quantityToBuy ? "checkmark.circle.fill" : "circle")
                     .resizable()
@@ -84,12 +84,13 @@ struct ItemCell: View {
 
 struct ItemDetails: View {
     
-    @Binding var item: Item
+    @ObservedObject var item: Item
     
-    @State var itemname: String = ""
-    @State var quantityToBuy: Int = 0
-    @State var quantityBought: Int = 0
-    @State var observation: String = ""
+    @State var itemname = ""
+    @State var selectedCategory = ""
+    @State var quantityToBuy = ""
+    @State var quantityBought = ""
+    @State var observation = ""
     
     
     var body: some View {

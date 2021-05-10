@@ -14,7 +14,7 @@ enum itemCategory:String, CaseIterable {
     case outros
 }
 
-public struct Item {
+public class Item: ObservableObject {
     
     var id = UUID()
     var name: String
