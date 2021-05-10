@@ -2,6 +2,7 @@ import SwiftUI
 
 struct CreateItemView: View {
     @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var event:Event
     @Binding var color: Color
     @State var itemName = ""
     @State var quantityByPerson: Float = 0
@@ -53,7 +54,7 @@ struct CreateItemView: View {
             .navigationBarItems(leading: Button("Cancelar") {
                 presentationMode.wrappedValue.dismiss()
             }.foregroundColor(.purple), trailing: Button("OK") {
-                //add event to list here
+                event.addItem(newItem: Item(name: itemName, unity: unity, category: selectedCategory, quantityPerPerson: quantityByPerson, pricePerItem: 0, quantityToBuy: 0, quantityBought: 0))
                 presentationMode.wrappedValue.dismiss()
             }.disabled(itemName.isEmpty).accentColor(.purple))
             .background(Color("Background")).ignoresSafeArea()
