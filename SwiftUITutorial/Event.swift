@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class Event: Identifiable  {
+class Event: Identifiable, ObservableObject  {
     
     init(name:String, icon:String, color: Color, numberOfPeople: Int, startDate:Date, endDate:Date) {
         self.id = UUID()
@@ -26,11 +26,15 @@ class Event: Identifiable  {
     var icon: String
     var color: Color
     var numberOfPeople: Int = 0
-    var listOfItems: [Item] = []
+    @Published var listOfItems: [Item] = []
     var startDate: Date
     var endDate: Date
     
     func addItem(newItem: Item){
         self.listOfItems.append(newItem)
+    }
+    
+    func list() -> [Item] {
+        listOfItems
     }
 }

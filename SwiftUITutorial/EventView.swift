@@ -4,52 +4,28 @@ import SwiftUI
 struct EventView: View {
     
     @State var eventColor = Color(.systemRed)
-    @State var numberOfPeople = ""
-    @StateObject var eventController = EventController()
-    var event: Event
-    @ObservedObject var observedObject:EventController
+    @ObservedObject var event:Event
+    @State var numberOfPeople:Int = 4
+    @State var color:Color = Color(.systemRed)
     @State var emptyItem: Item = Item()
     @State var beverages: [Item] = testDataItensBebidas
     @State var foods: [Item] = testDataItensComidas
     @State private var showModal: Bool = false
     
     var body: some View {
-        NavigationView {
-            VStack(alignment: .leading){
-                List {
-                    TextField("Número de pessoas esperado", value: $numberOfPeople, formatter: NumberFormatter(), onEditingChanged: { (changed) in
-                    })
-                    .foregroundColor(.black)
-                    .keyboardType(.numberPad)
-                    
-                    Section(header: Text("Bebidas")){
-                        ForEach (beverages.indices) { idx in
-                            ItemCellTotal(item: self.$beverages[idx])
-                        }
-                    }
-                    
-                    Section(header: Text("Comidas")){
-                        ForEach (foods.indices) { idx in
-                            ItemCellTotal(item: self.$foods[idx])
-                        }
-                    }
-                }
-                .listStyle(GroupedListStyle())
+        
+        VStack(alignment: .leading){
+            List {
                 
-                Button(action: {
-                    self.showModal = true
-                }) {
-                  HStack {
-                    Image(systemName: "plus.circle.fill")
-                      .resizable()
-                      .frame(width: 20, height: 20)
-                    Text("Incluir item")
-                  }
-                }
-                .padding()
-                .accentColor(Color(UIColor.systemRed))
-                .sheet(isPresented: self.$showModal) {
-                    CreateItemView(color: $eventColor)
+                TextField("Nº de Convidados", value: $numberOfPeople, formatter: NumberFormatter(), onEditingChanged: { (changed) in
+                        self.event.numberOfPeople = numberOfPeople
+                    })
+                    .keyboardType(.numberPad)
+                
+                Section(header: Text("Itens")){
+                    ForEach(event.list(), id: \.id) { item in
+                        ItemCellTotal(item: item)
+                    }
                 }
             }
             .listStyle(GroupedListStyle())
@@ -66,8 +42,9 @@ struct EventView: View {
             }
             .padding()
             .accentColor(Color(UIColor.systemRed))
+            .navigationTitle("Evento")
             .sheet(isPresented: self.$showModal) {
-                //CreateItemView(color: Color(.systemRed))
+                CreateItemView(color: $color)
             }
         }
     }
@@ -75,13 +52,12 @@ struct EventView: View {
 
 struct ItemCellTotal: View {
     
-    @Binding var item: Item
+    @ObservedObject var item: Item
     @State private var showModal: Bool = false //aaaaaaaaa
     
     var body: some View {
-        NavigationLink(destination: ItemDetails(item: $item)) {
+        NavigationLink(destination: ItemDetails(item: item)) {
             HStack {
-
                 Text(item.name)
                 Spacer()
                 Text(String(item.quantityToBuy))

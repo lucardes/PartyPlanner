@@ -21,14 +21,14 @@ struct EventListView: View {
                 List {
                     Section(header: Text("eventos futuros")){ //section eventos futuros
                         ForEach(observedObject.list()){ event in
-//                            NavigationLink(destination: EventView(eventId: event.id, observedObject: observedObject)) { //event view
-//                                EventItemView(event: event)
-//                             }
+                            NavigationLink(destination: EventView(event: event)) { //event view
+                                EventItemView(event: event)
+                             }
                         }
                     }
-    //                Section(header: Text("eventos passados")){
-    //
-    //                }
+                    Section(header: Text("eventos passados")){
+    
+                    }
                 }
                 .navigationTitle("Eventos")
                 .listStyle(GroupedListStyle())
