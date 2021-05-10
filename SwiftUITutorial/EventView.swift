@@ -13,40 +13,46 @@ struct EventView: View {
     @State private var showModal: Bool = false
     
     var body: some View {
-        
-        VStack(alignment: .leading){
-            List {
-                
-                TextField("Nº de Convidados", value: $numberOfPeople, formatter: NumberFormatter(), onEditingChanged: { (changed) in
-                        self.event.numberOfPeople = numberOfPeople
-                    })
-                    .keyboardType(.numberPad)
-                
-                Section(header: Text("Itens")){
-                    ForEach(event.list(), id: \.id) { item in
-                        ItemCellTotal(item: item)
+        NavigationView{
+            VStack(alignment: .leading){
+                List {
+                    
+                    TextField("Nº de Convidados", value: $numberOfPeople, formatter: NumberFormatter(), onEditingChanged: { (changed) in
+                            self.event.numberOfPeople = numberOfPeople
+                        })
+                        .keyboardType(.numberPad)
+                    
+                    Section(header: Text("Itens")){
+                        ForEach(event.list(), id: \.id) { item in
+                            ItemCellTotal(item: item)
+                        }
                     }
                 }
-            }
-            .listStyle(GroupedListStyle())
-            
-            Button(action: {
-                self.showModal = true
-            }) {
-              HStack {
-                Image(systemName: "plus.circle.fill")
-                  .resizable()
-                  .frame(width: 20, height: 20)
-                Text("Incluir item")
-              }
-            }
-            .padding()
-            .accentColor(Color(UIColor.systemRed))
-            .navigationTitle("Evento")
-            .sheet(isPresented: self.$showModal) {
-                CreateItemView(color: $color)
+                .listStyle(GroupedListStyle())
+                
+                Button(action: {
+                    self.showModal = true
+                }) {
+                  HStack {
+                    Image(systemName: "plus.circle.fill")
+                      .resizable()
+                      .frame(width: 20, height: 20)
+                    Text("Incluir item")
+                  }
+                }
+                .padding()
+                .accentColor(Color(UIColor.systemRed))
+                .sheet(isPresented: self.$showModal) {
+                    CreateItemView(event:event, color: $color)
+                }
             }
         }
+        .navigationBarItems(trailing: NavigationLink(
+            destination: ShoppingList(),
+            label: {
+                Image(systemName: "list.bullet")
+            }))
+        .navigationTitle("Evento")
     }
 }
 
